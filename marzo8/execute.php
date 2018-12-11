@@ -46,11 +46,11 @@
 		//i parametri sono cosa voglio mandare indietro al mio utente, rimando il testo che
 		//ho ricevuto e che si trova nella variabile $text
 		$parameters = array('chat_id' => $chatId, "text" => $text);
-		if ($text == "Quack") {
+		/*if ($text == "Quack") {
 			$text = "QUACK!";
 			$parameters = array('chat_id' => &chatId, "text" => $text);
-		}
-	
+		}*/
+		
 		
 		//aggiungo il comando di invio
 		//e lo invio
