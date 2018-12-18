@@ -49,6 +49,9 @@
 		if($text=="data"){
 			$text = "La data odierna è: ".date("g.m.y");
 			$parameters = array('chat_id' => $chatId, "text" => $text);
+		}else{
+			$text = "Quack";
+			$parameters = array('chat_id' => $chatId, "text" => $text);
 		}
 	
 		
