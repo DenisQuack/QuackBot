@@ -52,7 +52,11 @@
 		}
 		if($text=="anatra"){
 			sendAudio($chatId, "quack.mp3", false, "L'anatra fa QUACK", $api);
-		}else{
+		}
+		if($text=="foto"){
+			sendFoto($chatId, "foto.jpg", false, "Guarda come sguazza", $api);
+		}
+		else{
 			$text = "Quack";
 			$parameters = array('chat_id' => $chatId, "text" => $text);
 		}
