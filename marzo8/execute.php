@@ -3,7 +3,7 @@
 		require 'class-http-request.php';
 		require 'functions.php';
 		//modificare col vostro token del bot
-		$api="761871643:AAHKpkQ70IMMg_o-5BnNkmCus7RPwj46M3o";
+		$api="487428045:AAFHYEqqftrK7xJvW8_9anPiodBw0HHuWkE";
 		
 		
 		//prendo quello che mi è arrivato e lo salvo nella variabile content
@@ -46,11 +46,11 @@
 		//i parametri sono cosa voglio mandare indietro al mio utente, rimando il testo che
 		//ho ricevuto e che si trova nella variabile $text
 		$parameters = array('chat_id' => $chatId, "text" => $text);
-		/*if ($text == "Quack") {
-			$text = "QUACK!";
-			$parameters = array('chat_id' => &chatId, "text" => $text);
-		}*/
-		
+		if($text=="data"){
+			$text = "La data odierna è: ".date("g.m.y");
+			$parameters = array('chat_id' => $chatId, "text" => $text);
+		}
+	
 		
 		//aggiungo il comando di invio
 		//e lo invio
