@@ -46,11 +46,11 @@
 		//i parametri sono cosa voglio mandare indietro al mio utente, rimando il testo che
 		//ho ricevuto e che si trova nella variabile $text
 		$parameters = array('chat_id' => $chatId, "text" => $text);
-		if($text=="Data"){
+		if($text=="data"){
 			$text = "La data odierna è: ".date("g.m.y");
 			$parameters = array('chat_id' => $chatId, "text" => $text);
 		}
-		if($text=="Anatra"){
+		if($text=="anatra"){
 			sendAudio($chatId, "quack.mp3", false, "L'anatra fa QUACK", $api);
 		}else{
 			$text = "Quack";
