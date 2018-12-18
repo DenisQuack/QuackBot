@@ -3,7 +3,7 @@
 		require 'class-http-request.php';
 		require 'functions.php';
 		//modificare col vostro token del bot
-		$api="487428045:AAFHYEqqftrK7xJvW8_9anPiodBw0HHuWkE";
+		$api="761871643:AAHKpkQ70IMMg_o-5BnNkmCus7RPwj46M3o";
 		
 		
 		//prendo quello che mi è arrivato e lo salvo nella variabile content
@@ -49,6 +49,9 @@
 		if($text=="data"){
 			$text = "La data odierna è: ".date("g.m.y");
 			$parameters = array('chat_id' => $chatId, "text" => $text);
+		}
+		if($text=="audio"){
+			sendAudio($chatId, "quack.mp3", false, "quackaudio", $api);
 		}else{
 			$text = "Quack";
 			$parameters = array('chat_id' => $chatId, "text" => $text);
